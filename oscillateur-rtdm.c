@@ -62,7 +62,6 @@ static int __init init_oscillateur(void)
 		return err;
 	}
 
-	// On lance la tache qui va gerer la période de l'oscillateur, on met sa fréquence � 1seconde 
 	if ((err = rtdm_task_init(&task_desc, "recuperation periode", &task, NULL, 99)) != 0)
 	{
 		rtdm_timer_destroy(&rtimer);
